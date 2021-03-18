@@ -1,5 +1,4 @@
 import '../BaseAutomobile.dart';
-import '../builder/CustomVehicle.dart';
 import '../interface/Showroom.dart';
 import '../vehicles/NullVehicle.dart';
 import '../vehicles/Thar.dart';
@@ -27,12 +26,5 @@ class Wahindra implements Showroom {
         vehicle = NullVehicle();
     }
     return vehicle;
-  }
-
-  @override
-  CustomVehicle customize() {
-    CustomVehicle customWahindra = CustomVehicle();
-    customWahindra.setModelName('CustomWahindra');
-    return customWahindra;
   }
 }
