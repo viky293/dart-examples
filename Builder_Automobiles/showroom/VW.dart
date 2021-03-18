@@ -1,4 +1,5 @@
 import '../BaseAutomobile.dart';
+import '../builder/CustomVehicle.dart';
 import '../interface/Showroom.dart';
 import '../vehicles/NullVehicle.dart';
 import '../vehicles/VWPoloGTTSI.dart';
@@ -21,7 +22,8 @@ class VW implements Showroom {
     BaseAutomobile vehicle;
     switch (model) {
       case 'VWPoloGTTSI':
-        vehicle = VWPoloGTTSI(); //Each product can implement their own factory, here is it's concrete initialization.
+        vehicle =
+            VWPoloGTTSI(); //Each product can implement their own factory, here is it's concrete initialization.
         break;
       case 'VWPoloTDI':
         vehicle = VWPoloTDI();
@@ -30,5 +32,12 @@ class VW implements Showroom {
         vehicle = NullVehicle();
     }
     return vehicle;
+  }
+
+  @override
+  CustomVehicle customize() {
+    CustomVehicle customVw = CustomVehicle();
+    customVw.setModelName('CustomVW');
+    return customVw;
   }
 }
