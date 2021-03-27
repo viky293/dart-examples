@@ -3,13 +3,11 @@ This section is part 3 and aims to provide an example for the Abstract Factory M
 
 Implementation in
 
-- [IAutomobileFactory.dart](./interface/Highway.dart)
-- [VW.dart](./showroom/VW.dart) 
-- [Wahindra.dart](showroom/Wahindra.dart) 
+- [IAutomobileFactory.dart](./interface/IAutomobileFactory.dart) //Interface that enforces the abstract factory. 
+- [Showroom.dart](./interface/Showroom.dart)
+- [VW.dart](./showroom/VW.dart) //Each of it's product know how to build itself.
+- [Wahindra.dart](showroom/Wahindra.dart)  //Each of it's product know how to build itself.
 
-```
-Interface that enforces the abstract factory. Each of it's product know how to build itself.
-```
 Simple Factory for 
 
 - [ShowroomFactory.dart](./factory/ShowroomFactory.dart)
